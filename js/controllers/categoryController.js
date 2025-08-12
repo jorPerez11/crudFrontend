@@ -90,14 +90,14 @@ document.addEventListener("DOMContentLoaded", ()=> {
                 tr.querySelector(".edit-btn").addEventListener("click", ()=>{
                     form.categoryId.value = cat.idCategoria;
                     form.categoryName.value = cat.nombreCategoria;
-                    form.categoryDescription.value = cat.categoryDescription;
+                    form.categoryDescription.value = cat.descripcion;
                     lblModal.textContent= "Actualizar categoria";
                     //El modal se carga hasta que el formulario ya tenga los datos cargados
                     modal.show();
                 });
 
                 //Funcionabilidad para botones eliminar 
-                tr.querySelector(".delelete-btn").addEventListener("click", ()=>{
+                tr.querySelector(".delete-btn").addEventListener("click", ()=>{
                     if(confirm("¿Desea eliminar esta categoria?")){
                         deleteCategory(cat.idCategoria).then(loadCategories);
                     }
